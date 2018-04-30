@@ -1,1 +1,1 @@
-add_lunch_combo lineage_lettuce-userdebug
+add_lunch_combo rr_lettuce-userdebug
