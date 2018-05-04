@@ -1,5 +1,5 @@
 # Copyright (C) 2014 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,22 +27,9 @@ PRODUCT_DEVICE := lettuce
 
 PRODUCT_GMS_CLIENTID_BASE := android-micromax
 
-TARGET_VENDOR_PRODUCT_NAME := YUPHORIA
-TARGET_VENDOR_DEVICE_NAME := YUPHORIA
-
-# Inherit some common Lineage stuff.
-TARGET_ARCH := arm64
-TARGET_DENSITY := xhdpi
-
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 720
-
-## Use the latest approved GMS identifiers unless running a signed build
-ifneq ($(SIGN_BUILD),true)
-
-# Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="YUPHORIA-user 5.1.1 LMY49J YOG4PAS8A8 release-keys" \
+    PRODUCT_NAME=YUPHORIA \
+    TARGET_DEVICE=YUPHORIA
 
-    PRIVATE_BUILD_DESC= "YUPHORIA-user 5.1.1 LMY49J YOG4PAS8A8 release-keys"
-endif
 BUILD_FINGERPRINT := YU/YUPHORIA/YUPHORIA:5.1.1/LMY49J/YOG4PAS8A8:user/release-keys
