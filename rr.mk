@@ -26,10 +26,18 @@ BOARD_VENDOR := yu
 PRODUCT_DEVICE := lettuce
 
 PRODUCT_GMS_CLIENTID_BASE := android-micromax
+# Inherit some common Lineage stuff.
+TARGET_ARCH := arm64
+TARGET_DENSITY := xhdpi
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="YUPHORIA-user 5.1.1 LMY49J YOG4PAS8A8 release-keys" \
-    PRODUCT_NAME=YUPHORIA \
-    TARGET_DEVICE=YUPHORIA
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 720
+
+## Use the latest approved GMS identifiers unless running a signed build
+
+PRODUCT_BUILD_PROP_OVERRIDES := \
+    PRIVATE_BUILD_DESC :="YUPHORIA-user 5.1.1 LMY49J YOG4PAS8A8 release-keys" \
+    PRODUCT_NAME :=YUPHORIA \
+    TARGET_DEVICE :=YUPHORIA
 
 BUILD_FINGERPRINT := YU/YUPHORIA/YUPHORIA:5.1.1/LMY49J/YOG4PAS8A8:user/release-keys
